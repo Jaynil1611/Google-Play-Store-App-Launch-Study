@@ -5,7 +5,8 @@ The SRS_2019.pdf file contains all the insights to be generated from the dataset
 ### Start :
 1. Clone this repository on your local computer.
 2. Change the path to excel datasets in python (.py) files.
-3. Exceute the code after the above changes.
+3. Make a database for the project using the playstore.sql dump file.
+4. Exceute the code after the above changes.
 
 ### Run :
 1. After executing a Tkinter GUI window will be displayed with a list of features/insights about the study.
