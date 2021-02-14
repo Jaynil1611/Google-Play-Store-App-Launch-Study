@@ -21,11 +21,13 @@ import Question_19
 import Question_20
 warnings.filterwarnings('ignore')
 # Creating the data frame to read the csv file
-df = pd.read_excel('C:\\Users\\Jaynil Gaglani\\Machine_Learning_Coding_Track_Module_5\\Datasets_Python_Project\\app_data_cleaned.xlsx',header=0)
+#df = pd.read_excel('C:\\Users\\Jaynil Gaglani\\Machine_Learning_Coding_Track_Module_5\\Datasets_Python_Project\\app_data_cleaned.xlsx',header=0)
+df = pd.read_excel('app_data_cleaned.xlsx',header=0)
 #df.drop(index = 10472 , inplace = True)
 #df.drop(index = 9148,inplace=True)
 ##Creating the  second data frame to read the review csv file for adding new data
-review_df = pd.read_csv('C:\\Users\\Jaynil Gaglani\\Machine_Learning_Coding_Track_Module_5\\Datasets_Python_Project\\user_reviews.csv',header=0)
+# review_df = pd.read_csv('C:\\Users\\Jaynil Gaglani\\Machine_Learning_Coding_Track_Module_5\\Datasets_Python_Project\\user_reviews.csv',header=0)
+review_df = pd.read_csv('user_reviews.csv',header=0)
 ##Cleaning the data of the Installs column
 #df['Installs'] = df['Installs'].str.strip('+')
 #df['Installs'] = df['Installs'].str.replace(',','')
@@ -57,7 +59,9 @@ df['Month'] = pd.DatetimeIndex(df['Last Updated']).month
 #month_dict = CatMonthInstalls.to_dict()
 #
 ##Reading the dataset2  for the questions
-df2 = pd.read_csv('C:\\Users\\Jaynil Gaglani\\Machine_Learning_Coding_Track_Module_5\\Datasets_Python_Project\\user_reviews.csv',header=0)
+# df2 = pd.read_csv('C:\\Users\\Jaynil Gaglani\\Machine_Learning_Coding_Track_Module_5\\Datasets_Python_Project\\user_reviews.csv',header=0)
+df2 = pd.read_csv('user_reviews.csv',header=0)
+
 #dropind = df2[df2['Sentiment'].isnull() == True].index
 #df2.drop(index = dropind,inplace = True)
 #
@@ -1457,10 +1461,10 @@ def login_verify():
     connection.commit() # commiting the connection then closing it.
     connection.close() # closing the connection of the database
     if student_info:
-        messagebox.showinfo("Congratulation", "Login Successfull") # displaying message for successful login
+        tm.showinfo("Congratulation", "Login Successfull") # displaying message for successful login
         home()
     else:
-        messagebox.showerror("Error", "Invalid Username or Password") # displaying message for invalid details
+        tm.showerror("Error", "Invalid Username or Password") # displaying message for invalid details
 
 def main_screen():
      global screen, username_verify, password_verify

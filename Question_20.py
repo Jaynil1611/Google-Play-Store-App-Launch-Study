@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import pandas as pd
-a=pd.read_excel('C:\\Users\\Jaynil Gaglani\\Machine_Learning_Coding_Track_Module_5\\Datasets_Python_Project\\app_data_cleaned.xlsx',header=0)
+# a=pd.read_excel('C:\\Users\\Jaynil Gaglani\\Machine_Learning_Coding_Track_Module_5\\Datasets_Python_Project\\app_data_cleaned.xlsx',header=0)
+a=pd.read_excel('app_data_cleaned.xlsx',header=0)
 x=a[['Category','App','Rating','Installs','Size','Content Rating','Type']]
 cat =a['Category'].unique()
 cat=cat.tolist()

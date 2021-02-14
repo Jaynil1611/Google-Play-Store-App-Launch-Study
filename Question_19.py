@@ -5,7 +5,8 @@ import numpy as np
 import statistics  
 import warnings 
 warnings.filterwarnings('ignore')
-df = pd.read_excel('C:\\Users\\Jaynil Gaglani\\Machine_Learning_Coding_Track_Module_5\\Datasets_Python_Project\\app_data_cleaned.xlsx',header=0)
+# df = pd.read_excel('C:\\Users\\Jaynil Gaglani\\Machine_Learning_Coding_Track_Module_5\\Datasets_Python_Project\\app_data_cleaned.xlsx',header=0)
+df = pd.read_excel('app_data_cleaned.xlsx',header=0)
 df['Rating'] = df['Rating'].astype(float)
 free = df[df['Type']=='Free']
 d = free[['Rating','Installs']]
@@ -34,7 +35,8 @@ for i in range(len(d1)):
 Maxpaid = sorted(paids, key=paids.get, reverse=True)[:5]
 # print(Maxpaid)
 
-review_df = pd.read_csv('C:\\Users\\Jaynil Gaglani\\Machine_Learning_Coding_Track_Module_5\\Datasets_Python_Project\\user_review_cleaned.csv',header=0)
+#review_df = pd.read_excel('C:\\Users\\Jaynil Gaglani\\Machine_Learning_Coding_Track_Module_5\\Datasets_Python_Project\\user_review_cleaned.xlsx',header=0)
+review_df = pd.read_excel('user_review_cleaned.xlsx',header=0)
 df2 = review_df.groupby('App')['Sentiment_Polarity','Sentiment_Subjectivity'].mean()
 # print(df2.head())
 d3 = df2[['Sentiment_Polarity','Sentiment_Subjectivity']]
